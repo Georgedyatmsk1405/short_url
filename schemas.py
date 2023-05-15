@@ -1,4 +1,4 @@
-from pydantic import BaseModel, validator, Field  # TODO Аналогично предыдущему
+from pydantic import BaseModel, validator, Field 
 import validators
 
 

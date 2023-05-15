@@ -39,6 +39,11 @@ async def find_short_url(url: schemas.ShortUrlIn, session=Depends(get_async_sess
         res = await session.execute(select(models.BaseUrl).where(models.BaseUrl.short_url == url.short_url))
     if result := res.scalars().first():
         return result.long_url
+    else:
+        raise HTTPException(
+            status_code=HTTPStatus.NOT_ACCEPTABLE,
+            detail=f"no such url",
+        )
 
 
 @app.post('/deletelongurl/', response_model=bool)
