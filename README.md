@@ -1,6 +1,6 @@
 # short_url
 fastapi project
-
+git clone https://github.com/Georgedyatmsk1405/short_url.git
 cd short_url
 
 docker compose up
