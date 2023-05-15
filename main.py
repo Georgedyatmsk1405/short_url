@@ -2,9 +2,9 @@ import time
 import uvicorn
 from sqlalchemy import delete
 from sqlalchemy.future import select
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.ext.asyncio import  AsyncSession
-
+from http import HTTPStatus
 import models
 import schemas
 from database import engine,  get_async_session
