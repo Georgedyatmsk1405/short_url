@@ -34,3 +34,4 @@ async def get_obj_by_short_link(long_url: str, session: AsyncSession) -> models.
         return url
 print("test")
 print("test2")
+print("test3")
