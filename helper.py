@@ -32,3 +32,5 @@ async def get_obj_by_short_link(long_url: str, session: AsyncSession) -> models.
     url = urls.scalars().first()
     if url:
         return url
+print("test")
+print("test2")
